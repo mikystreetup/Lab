@@ -1,0 +1,206 @@
+// Mikael's Lab Program
+#include <iostream>
+#include <string>
+using namespace std; 
+
+//Global Variables and Prototypes
+void expressions();
+void addressThree();
+void addressTwo();
+void addressOne();
+void addressZero();
+
+
+// Main function
+int main()
+{
+ 
+ cout << "Please select which address machines to complete the following expression" << endl;
+ cout << "                   A = (B + C) * (D + E) " << endl;
+cout << "--------------------------------------------------------------------" << endl;
+ 
+// Start and Selecting the expression
+ int expression; 
+ expressions(); //prototype
+ cin >> expression; // taking user input on selecting expression
+ 
+ switch(expression) 
+ {
+     case 1: cout << "Three address machine selected" << endl;
+     break;
+     case 2: cout << "Two address machine selected" << endl;
+     break;
+     case 3: cout << "One address machine selected" << endl;
+     break;
+     case 4: cout << "Zero address machine selected" << endl;
+     break;
+    
+}// end of selecting expression 
+
+     cout << "--------------------------------------------------------------------" << endl;
+//Grabbing prototype
+if (expression == 1)
+    addressThree();
+else if (expression == 2)
+    addressTwo();
+else if (expression == 3)
+    addressOne();
+else if (expression == 4)
+    addressZero();
+
+}
+
+//Expressions
+ void expressions()
+ {
+     cout << "1. Three address machine" << endl;
+     cout <<  "2. Two address machine" << endl;
+     cout << "3. One address machine" << endl;
+     cout << "4. Zero address machine" << endl;
+     cout << endl;
+     }
+
+ void addressThree()
+{  
+    int b= 0; // value B
+    int c= 0; // value C
+    int d=0; // value D
+    int e= 0; // value e
+    int store1= 0; // storing value b and c
+    int store2= 0; //storing value d and e
+    int store3= 0; //storing value total
+    
+    cout << "Please Give me the Values of B & C" << endl;
+    cout << " Value B = ";
+    cin >> b; 
+    cout << endl;
+    cout << " Value C = ";
+    cin >> c;
+    cout << endl;
+    
+    store1 = b + c; // storing b + c
+    
+    cout << "Please Give me the Values of D & E " << endl;
+    cout << " Value D = ";
+    cin >> d;
+    cout << endl;
+    cout << " Value E = ";
+    cin >> e;
+    cout << endl;
+    
+    store2 = d + e; // storing d + e
+    
+    store3 = store1 * store2; // multiplying 
+    
+    cout << "The total from the values given is " << store3 << endl;
+    
+}
+
+void addressTwo()
+{
+     int b= 0; // value B
+    int c= 0; // value C
+    int d=0; // value D
+    int e= 0; // value e
+    int store1= 0; // storing value b and c
+    int store2= 0; //storing value d and e
+    int store3= 0; //storing value total
+    
+    cout << "Please Give me the Values of B & C" << endl;
+    cout << " Value B = ";
+    cin >> b; 
+    
+    store1 = b; // load B into R0
+    
+    cout << endl;
+    cout << " Value C = ";
+    cin >> c;
+    cout << endl;
+    
+    store1 = store1 + c; // add R0 + C
+    
+    cout << "Please Give me the Values of D & E " << endl;
+    cout << " Value D = ";
+    cin >> d;
+    cout << endl;
+    store2 = d;
+    
+    cout << " Value E = ";
+    cin >> e;
+    
+    store2 = store2 + e; 
+    cout << endl;
+    
+    store3 = store1*store2;
+    
+     cout << "The total from the values given is " << store3 << endl;
+    
+}
+
+void addressOne()
+{
+    int b= 0; // value B
+    int c= 0; // value C
+    int d=0; // value D
+    int e= 0; // value e
+    int tempvalue= 0; // storing value b and c
+    int store2= 0; //storing value d and e
+    
+    cout << "Please Give me the Values of B & C" << endl;
+    cout << " Value B = ";
+    cin >> b; // load b
+    cout << endl;
+    cout << " Value C = ";
+    cin >> c;
+    cout << endl;
+    tempvalue= b + c; // add c and b to tempvalue
+    
+    
+    cout << "Please Give me the Values of D & E " << endl;
+    cout << " Value D = ";
+    cin >> d;
+    cout << endl;
+    cout << " Value E = ";
+    cin >> e;
+    cout << endl;
+    d = d + e; // load e to d
+    
+    store2 = tempvalue * d; // temp value and d is multiplied and stored into value A
+    
+    cout << "The total from the values given is " << store2 << endl;
+}
+
+void addressZero()
+{
+ 
+    
+    cout << "Please Give me the Values of B & C" << endl;
+      cout << " Value B = ";
+      int b;
+    cin >> b; // push b
+    cout << endl;
+    cout << " Value C = ";
+    int c;
+    cin >> c; // push c 
+    cout << endl;
+    b = b + c; //add the two and store it nowhere
+    
+     
+    cout << "Please Give me the Values of D & E " << endl;
+    cout << " Value D = ";
+    int d; // push d
+    cin >> d;
+    cout << endl;
+    int e; // push e
+    cout << " Value E = ";
+    cin >> e;
+    cout << endl;
+    d = d + e; //add the two and store it nowhere
+    
+    int A;
+    A = d * b;
+     cout << "The total from the values given is " << A << endl;
+    
+    
+}
+
