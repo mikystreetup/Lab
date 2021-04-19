@@ -1,0 +1,52 @@
+// Mikael's Lab Program
+#include <iostream>
+#include <string>
+using namespace std; 
+
+//Global Variables and Prototypes
+void expressions();
+void addressThree();
+void addressTwo();
+void addressOne();
+void addressZero();
+
+
+// Main function
+int main()
+{
+ 
+ cout << "Please select which address machines to complete the expression" << endl;
+cout << "--------------------------------------------------------------------" << endl;
+ 
+// Start and Selecting the expression
+ int expression; 
+ expressions(); //prototype
+ cin >> expression; // taking user input on selecting expression
+ 
+ switch(expression) 
+ {
+     case 1: cout << "Three address machine selected" << endl;
+     case 2: cout << "Two address machine selected" << endl;
+     case 3: cout << "One address machine selected" << endl;
+     case 4: cout << "Zero address machine selected" << endl;
+}// end of selecting expression 
+
+//Grabbing prototype
+if expression
+
+
+
+//Expressions
+ void expressions()
+ {
+     cout << "Three address machine" << endl;
+     cout << "Two address machine" << endl;
+     cout << "One address machine" << endl;
+     cout << "Zero address machine" << endl;
+     cout << endl;
+ }
+ 
+void addressThree()
+{  
+    
+}
